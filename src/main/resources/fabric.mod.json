@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Global Shaderpack Properties [Fabric]",
   "description": "Help modpack author to modify properties inside the shaderpacks",
-  "authors": [],
+  "authors": ["P1nero"],
   "contact": {},
   "license": "All-Rights-Reserved",
   "icon": "icon.png",
