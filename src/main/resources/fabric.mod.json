@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "globalshaderpackproperties",
+  "version": "${version}",
+  "name": "Global Shaderpack Properties [Fabric]",
+  "description": "Help modpack author to modify properties inside the shaderpacks",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.p1nero.globalshaderpackproperties.client.GlobalShaderpackPropertiesMod"
+    ]
+  },
+  "mixins": [
+    "globalshaderpackproperties.mixins.json",
+    {
+      "config": "globalshaderpackproperties.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "1.20.x"
+  }
+}
