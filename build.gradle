@@ -7,16 +7,14 @@ version = project.mod_version
 group = project.maven_group
 
 base {
-    archivesName = project.archives_base_name
+    archivesName = project.archives_base_name + "-1.21.x"
 }
-
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 loom {
     splitEnvironmentSourceSets()
 
     mods {
-        "globalshaderpackproperties" {
+        "test" {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }
@@ -30,19 +28,14 @@ fabricApi {
 }
 
 repositories {
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
-
-    maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
+    repositories {
+        maven {
+            url "https://cursemaven.com"
+            content {
+                includeGroup "curse.maven"
+            }
         }
     }
-
 }
 
 dependencies {
@@ -52,11 +45,9 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "curse.maven:irisshaders-455508:6258195"
-    modImplementation "curse.maven:sodium-394468:6260639"
-    modImplementation "curse.maven:aether-255308:6800393"
-    modImplementation "curse.maven:accessories-938917:6304691"
-    modImplementation "curse.maven:cloth-config-348521:5729104"
+
+    modImplementation "curse.maven:irisshaders-455508:6213635"
+    modImplementation "curse.maven:sodium-394468:6382649"
 }
 
 processResources {
@@ -72,7 +63,7 @@ processResources {
     }
 }
 
-def targetJavaVersion = 17
+def targetJavaVersion = 21
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly
