@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "client": [
     "IrisConfigMixin",
-    "ShaderPackMixin"
+    "ShaderPackMixin",
+    "IdMapMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -14,7 +15,5 @@
     "requireAnnotations": true
   },
   "mixins": [
-    "IdMapMixin",
-    "IrisConfigMixin"
   ]
 }
