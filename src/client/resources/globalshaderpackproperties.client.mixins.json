@@ -4,8 +4,9 @@
   "package": "com.p1nero.globalshaderpackproperties.client.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "IrisConfigMixin",
     "ShaderPackMixin",
-    "IrisConfigMixin"
+    "IdMapMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -14,6 +15,5 @@
     "requireAnnotations": true
   },
   "mixins": [
-    "IrisConfigMixin"
   ]
 }
